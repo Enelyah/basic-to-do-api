@@ -1,0 +1,172 @@
+/* general */
+
+body {
+  margin: 0;
+  font-family: 'Signika', sans-serif;
+  opacity: 0.8;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.app {
+  padding: 5vh 5vw;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  margin: 3vh 3vw;
+
+}
+
+.btn {
+  display: block;
+  margin: 30px auto;
+  background-color: rgba(247, 158, 25, 0.5);
+  width: 30vw;
+  height: 2em;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 600;
+  font-size: large;
+}
+
+.icon {
+  display: block;
+  margin: 30px auto;
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+}
+
+.orange {
+  color: rgba(247, 158, 25, 0.5);
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .hidden-desktop {
+    display: none;
+  }
+  .hidden-mobile {
+    display: block;
+  }
+}
+
+/* task */
+
+.strike {
+  text-decoration: line-through;
+}
+
+.nostrike {
+  text-decoration:none;
+}
+
+.description {
+  font-style:oblique;
+  color:  rgb(117, 156, 156);
+}
+
+.checkbox {
+  margin: 15px;
+}
+
+.task hr {
+  width: 70vw;
+  margin: 3vh 3vw;
+
+}
+
+/* modal */
+
+.modal-body {
+	text-align: center;
+	align-items: center;
+	padding-bottom: 25px;
+}
+
+  .modal-cover {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.6);
+	z-index: 1040;
+	display: none;
+  }
+  .modal-cover.modal-cover-active {
+	display: block;
+  }
+  .modal-container {
+	z-index: 1050;
+	position: fixed;
+	border: 1px solid lightgray;
+	border-radius: 15px;
+	background: white;
+	width: 90vw;
+	min-height: 300px;
+  margin:0 auto;
+  display:table;
+  left: 0;
+  right:0;
+  top: 50%; 
+  border:1px solid;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%);
+  display: none;
+}
+  .modal-container.modal-container-active {
+  display: block;  
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+
+  }
+  .modal-header {
+	  padding: 20px;
+  }
+
+  .modal-title {
+	  font-size: 20px ;
+	  font-weight: 500;
+  }
+  .chp-modal {
+	width:250px;
+	border:1px solid rgb(27, 24, 68);
+	padding:6px 0 6px 0;
+	margin: 15px;
+	border-radius:15px;
+	background:rgba(255, 255, 255, 0.185);
+	font:bold 13px Roboto;
+	color:  rgb(27, 24, 68);
+	text-align: center;
+}
+
+

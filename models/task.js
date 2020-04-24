@@ -4,7 +4,8 @@ const Schema   = mongoose.Schema;
 
 const taskSchema = new Schema({
   title: String,
-  doneyet: { type: Boolean, default: false }
+  description: String,
+  done: { type: Boolean, default: false }
 
 }, {timestamps: true});
 
