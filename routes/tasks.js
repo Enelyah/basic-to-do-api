@@ -15,8 +15,9 @@ router.post("/tasks", (req, res, next) => {
   Task.create({
     title: req.body.title,
     description: req.body.description,
-    done: req.body.done,
-  })
+    priority: req.body.priority,
+    done: req.body.done
+    })
     .then((task) => res.status(201).json(task))
     .catch((err) => res.status(500).json(err));
 });

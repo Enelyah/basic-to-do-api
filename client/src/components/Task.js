@@ -27,6 +27,8 @@ class Task extends Component {
 
   render() {
     const strikeClass = this.state.strikethrough ? "strike" : "nostrike";
+    const priorityClass = this.props.priority;
+
     return (
       <div key={this.props.id}>
         <div className="flex">
@@ -36,7 +38,7 @@ class Task extends Component {
             checked={this.state.done}
             onChange={this.taskDone.bind(this)}
           />
-          <h3 className={`title ` + strikeClass}>{this.props.title}</h3>
+          <h3 className={`title ` + strikeClass + " " + priorityClass}>{this.props.title}</h3>
         </div>
         <div className="task flex-v">
           <h4 className={`description ` + strikeClass}>

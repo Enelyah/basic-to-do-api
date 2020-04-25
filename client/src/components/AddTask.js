@@ -7,6 +7,7 @@ class AddTask extends Component {
   state = {
     title: "",
     description: "",
+    priority:"",
     msg: this.props.msg,
   };
 
@@ -14,9 +15,10 @@ class AddTask extends Component {
     event.preventDefault();
     const title = this.state.title;
     const description = this.state.description;
+    const priority = this.state.priority;
 
     axios
-      .post("http://localhost:5000/api/tasks", { title, description })
+      .post("http://localhost:5000/api/tasks", { title, description, priority })
       .then(() => {
         this.setState({ title: "", description: "", msg: "Task created!" });
         this.props.updateHandler();
@@ -42,7 +44,7 @@ class AddTask extends Component {
           name="title"
           value={this.state.title}
           onChange={this.handleChange}
-          className="chp-modal center custom-select margin-bottom"
+          className="chp-modal center margin-bottom"
           type="text"
         />
         <p>
@@ -52,8 +54,23 @@ class AddTask extends Component {
           name="description"
           value={this.state.description}
           onChange={this.handleChange}
-          className="chp-modal center custom-select margin-bottom"
+          className="chp-modal center margin-bottom"
         />
+        <p>
+          <label htmlFor="priority">Priority</label>
+        </p>
+        <select name="priority" className="custom-select" onChange={this.handleChange}>
+          <option value="Select" >Select...</option>
+          <option value="high" className="high">
+            High
+          </option>
+          <option value="medium" className="medium">
+            Medium
+          </option>
+          <option value="low" className="low">
+            Low
+          </option>
+        </select>
         <button className="btn" onClick={this.handleSubmit}>
           Submit
         </button>

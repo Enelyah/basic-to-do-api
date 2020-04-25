@@ -98,6 +98,7 @@ class Todo extends Component {
                 id={task._id}
                 key={task._id}
                 done={task.done}
+                priority={task.priority}
               />
             );
           })
@@ -113,6 +114,7 @@ class Todo extends Component {
                 id={task._id}
                 key={task._id}
                 done={task.done}
+                priority={task.priority}
               />
             );
           })
